@@ -1,0 +1,19 @@
+# Sequencia de Fibonacci
+def fibonacci(n):
+    # Verificar se a entrada e valida
+    if n <= 0:
+        return []
+    
+    # Inicializando a sequencia com os dois primeiros numeros
+    sequencia = [0, 1]
+    
+    # Gerando a sequencia de Fibonacci
+    while len(sequencia) < n:
+        prox_num = sequencia[-1] + sequencia[-2]
+        sequencia.append(prox_num)
+    return sequencia
+    
+    # Gerando a sequencia de Fibonacci ate o numero 100
+n = 100
+fib_sequencia = fibonacci(n)
+print(fib_sequencia)
